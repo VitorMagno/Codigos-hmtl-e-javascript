@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+    <head> 
+        <meta charset="utf-8">
+
+        <title>
+
+        </title>
+        <script>
+            function conversor ()
+            {
+                var x = document.getElementById("c").value;
+                var y = document.getElementById("m").value;
+                var cm=parseInt(x);
+                var m=parseInt(y);
+                var conversorcm = cm / 100;
+                var conversorm = m * 100;
+
+             
+                document.getElementById("resposta_em_m").innerHTML =cm+" é "+conversorcm+" em metros";
+                document.getElementById("resposta_em_cm").innerHTML =m+" é "+conversorm+" em centímetros";
+                
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>Conversor de medidas</h1><br>
+        Centímetros:<br><input type="text" id="c"><br>
+        Metros:<br><input type="text" id="m"><br>
+        <button type="button" onclick="conversor()">Converter</button><br>
+        <p id="resposta_em_m"></p>
+        <p id="resposta_em_cm"></p>
+    </body>
+</html>

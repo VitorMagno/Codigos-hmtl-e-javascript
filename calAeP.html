@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            function cal_area ()
+            {
+                var x, y, z;
+                x = document.getElementById("ladoum").value;
+                y = document.getElementById("ladodois").value;
+                z = document.getElementById("ladotres").value;
+                var ladoU, ladoD, ladoT;
+                ladoU =parseInt(x);
+                ladoD =parseInt(y);
+                ladoT =parseInt(z);
+                var area=(ladoD*ladoU)/2;
+
+                document.getElementById("respA").innerHTML = "área é "+area;
+
+            }
+            function cal_perim ()
+            {
+                var x, y,z;
+                x = document.getElementById("ladoum").value;
+                y = document.getElementById("ladodois").value;
+                z = document.getElementById("ladotres").value;
+                var ladoU, ladoD, ladoT;
+                ladoU =parseInt(x);
+                ladoD =parseInt(y);
+                ladoT =parseInt(z);
+                var perimetro = ladoU+ladoD+ladoT;
+                
+                document.getElementById("respP").innerHTML = "perímetro é "+perimetro;
+            }
+        </script>
+        <title>Cálculo da área e Perímetro de um triangulo</title>
+    </head>
+    <body>
+        <h1>Cálculo da área e Perímetro de um triangulo</h1>
+        <p>digite o tamanho dos lados do triangulo</p>
+        <input type="text" id='ladoum' name="lado um"><br>
+        <input type="text" id='ladodois' name="lado dois"><br>
+        <input type="text" id='ladotres' name="lado tres"><br>
+        <button type="button" onclick="cal_area()" id="area">calcule área</button><button type="button" onclick="cal_perim()" id="perim">calcule perímetro</button> 
+        <p id="respP"></p>
+        <p id="respA"></p>
+
+    </body>
+</html>

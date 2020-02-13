@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            function media()
+            {
+                let medProv, medTaref;
+                let provaU, provaD;
+                let tarefU, tarefD, tarefT, tarefQ;
+                /* Implementar. 
+                tarefU =
+                tarefD =
+                tarefT =
+                tarefQ =
+                */
+                medProv = (provaU + provaD) / 2;
+                medTaref = (tarefU + tarefD + tarefT + tarefQ) / 4;
+                let md = (0.5 * medProv) + (0.5 * medTaref); 
+                alert("Sua média é "+md);
+            }
+            
+        </script>
+        <title>Calculador de medias</title>
+    </head>
+    <body>
+        <h1>Calcule sua media em internet e web</h1>
+        <p>Nota da primeira prova</p>
+        <input type="number" id="media_um"><br>
+        <p>Nota da segunda prova</p>
+        <input type="number" id="media_dois">
+        <p>Nota da tarefa 1</p>
+        <input type="number" id="tarefa_um">
+        <p>Nota da tarefa 2</p>
+        <input type="number" id="tarefa_dois">
+        <p>Nota da tarefa 3</p>
+        <input type="number" id="tarefa_tres">
+        <p>Nota da tarefa 4</p>
+        <input type="number" id="tarefa_quatr">
+        <button type="button" onclick="media()"></button>
+        
+
+    </body>
+</html>

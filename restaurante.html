@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            let kg, suco, sobremesa;
+            
+            kg = 30.00;
+            suco = 4.00;
+            sobremesa = 4.00;
+            
+            
+            function consumo ()
+            {
+                let nome, peso, s, sb;
+                nome = document.getElementById("nome").value;
+                peso = document.getElementById("peso").value;
+                s = document.getElementById("suco").value;
+                sb = document.getElementById("sobremesa").value;
+                
+                let almoco = (peso/1000) * kg;
+                let ssuco = s * suco;
+                let sbsobremesa = sb * sobremesa;
+                let total = almoco + ssuco + sbsobremesa;
+                alert(nome+"\nConsumiu:\n"+peso+" gramas no self-service, totalizando R$ "+almoco+"\n"+s+" sucos totalizando R$ "+ssuco+"\n"+sb+" pratos de sobremesa totalizando R$ "+sbsobremesa+"\nTotal R$ "+total);
+            
+            }
+            
+        </script>
+        <title>Restaurante</title>
+    </head>
+    <body>
+
+        <h1>Cálculo de consumo</h1>
+        
+        <p>Digite seu nome</p>
+        <input type="text" id="nome">
+        
+        <p>Digite a quantidade de gramas do seu prato</p>
+        <input type="number" id="peso">
+        
+        <p>Quantos copos de suco</p>
+        <input type="number" id="suco">
+        
+        <p>Quantas sobremesas</p>
+        <input type="number" id="sobremesa"><br>
+        
+        <button type="button" onclick="consumo()">Calcular consumo</button>
+    </body>
+</html>
